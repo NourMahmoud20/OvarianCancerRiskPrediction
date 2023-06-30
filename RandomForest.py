@@ -39,37 +39,16 @@ dataNHIS = dataNHIS[dataNHIS.SEX_A != 1]
 
 #Select relevant input features from datasets and merge them
 
-columns_to_drop =['ovar_reasfoll', 'ovar_reassurv', 'ovar_reassymp', 'ovar_reasoth', 'ovar_intstat_cat', 'ovar_annyr', 
-'ovar_cancer_site', 'ovar_stage', 'ovar_stage_7e', 'ovar_stage_t', 'ovar_stage_n', 'ovar_stage_m', 'ovar_clinstage', 
-'ovar_clinstage_7e', 'ovar_clinstage_t', 'ovar_clinstage_n', 'ovar_clinstage_m', 'ovar_pathstage', 'ovar_pathstage_7e', 
-'ovar_pathstage_t', 'ovar_pathstage_n', 'ovar_pathstage_m', 'ovar_grade', 'ovar_topography', 
-'ovar_morphology', 'ovar_behavior', 'ovar_histtype', 'ovar_exitstat', 'ovar_exitage', 'ovar_seer',
-'ovar_cancer_first', 'ovar_curative_surg', 'ovar_curative_chemo', 'ovar_primary_trt', 'ovar_num_heslide_imgs',
-'ovar_has_deliv_heslide_img', 'plco_id', 'build', 'build_cancers', 'build_incidence_cutoff', 'ovar_exitdays',
-'ovar_primary_trt_days', 'ovar_cancer_diagdays', 'biopolink0', 'biopolink1', 'biopolink2', 'biopolink3', 'biopolink4',
-'biopolink5', 'ovar_mra_stat0', 'ovar_mra_stat1', 'ovar_mra_stat2', 'ovar_mra_stat3', 'ovar_mra_stat4', 
-'ovar_mra_stat5', 'tvu_result0', 'tvu_result1', 'tvu_result2', 'tvu_result3', 'ca125_result0', 'ca125_result1', 
-'ca125_result2', 'ca125_result3', 'ca125_result4', 'ca125_result5', 'ca125_level0', 'ca125_level1', 'ca125_level2',
-'ca125_level3', 'ca125_level4', 'ca125_level5', 'ca125_src0', 'ca125_src1', 'ca125_src2', 'ca125_src3', 'ca125_src4',
-'ca125_src5', 'ca125ii_level0', 'ca125ii_level1', 'ca125ii_level2', 'ca125ii_level3', 'ca125ii_level4', 
-'ca125ii_level5', 'orem_fyro', 'ca125_prot', 'ca125_days0', 'ca125_days1', 'ca125_days2', 'ca125_days3', 
-'ca125_days4', 'ca125_days5', 'tvu_days0', 'tvu_days1', 'tvu_days2', 'tvu_days3','bq_adminm','bq_returned', 
-'bq_age','bq_compdays','d_dthovar','f_dthovar','d_codeath_cat', 'f_codeath_cat','d_cancersite', 
-'f_cancersite', 'd_seer_death', 'f_seer_death', 'is_dead_with_cod', 'is_dead', 'mortality_exitage', 'mortality_exitstat',
-'build_death_cutoff', 'dth_days', 'mortality_exitdays','entryage_bq', 'entryage_dqx', 'entryage_dhq', 'entryage_sqx', 
-'entryage_muq', 'ph_any_dqx', 'ph_any_dhq', 'ph_any_sqx', 'ph_any_muq', 'ph_ovar_dqx', 'ph_ovar_dhq',
-'ph_ovar_sqx', 'ph_ovar_muq', 'ovar_eligible_sqx', 'ovar_eligible_dhq', 'ovar_eligible_dqx', 'entrydays_bq',
-'entrydays_dqx', 'entrydays_dhq', 'entrydays_sqx', 'entrydays_muq','fstcan_exitstat', 'fstcan_exitage', 'fstcan_exitdays',
-'in_TGWAS_population', 'reconsent_outcome', 'reconsent_outcome_days','dual','center','arm','rndyear','ph_ovar_trial','ph_any_trial'] 
+columns_to_drop =[' '] 
 
 dataPLCO = dataPLCO.drop(columns=columns_to_drop)
 my_list = list(dataPLCO)
 print (my_list)
 
-dataNH_subset = dataNHIS[['OVARYCAN_A','HEIGHTTC_A','WEIGHTLBTC_A','DIBEV_A','HYPEV_A','MAMEV_A','STREV_A','ASPMEDEV_A','RX12M_A','PAIAPG3M_A','PHQ85_A','DIFF_A']]
+dataNH_subset = dataNHIS[['']]
 
 # Rename common columns in dataNHIS to match name in dataPLCO
-dataNH_subset = dataNH_subset.rename(columns={'WEIGHTLBTC_A': 'weight_f', 'HEIGHTTC_A':'height_f','DIBEV_A': 'diabetes_f','MAMEV_A':'mammo_history','STREV_A':'stroke_f', 'HYPEV_A':'hyperten_f','OVARYCAN_A': 'ovar_cancer'})
+dataNH_subset = dataNH_subset.rename(columns={''})
 #print(dataNH_subset.describe())
 
 # Combine dataPLCO and dataNHIS
