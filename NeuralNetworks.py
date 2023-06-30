@@ -25,13 +25,13 @@ dataNHIS= pd.read_csv('/content/drive/My Drive/adult19.csv')
 
 #Select relevant input features from datasets and merge them
 #Inputs: Family History (Ovarian and Breast cancer), Body Type (BMI, Weight,Height), NSAIDS (Aspirin and Ibuprofen intake), Diseases (Arthritis, Hypertension,Diabetes, Osteoporosis, and Colorectal Polyps), and Smoking
-dataPL_subset=dataPLCO[['ovar_cancer','height_f','weight_f','diabetes_f','hyperten_f','fh_cancer','breast_fh','breast_fh_age','breast_fh_cnt','ovarsumm_fh','ovarsumm_fh_age','ovarsumm_fh_cnt']]
+dataPL_subset=dataPLCO[['']]
 
 print(dataPL_subset.describe())
-dataNH_subset = dataNHIS[['OVARYCAN_A','HEIGHTTC_A','WEIGHTLBTC_A','DIBEV_A','HYPEV_A','ASPMEDEV_A','ASPMEDNOWN_A','ASPONOWN_A','ASPMEDSTP_A','RX12M_A','PAIAPG3M_A','PHQ85_A','WLK100_A','DIFF_A','STEPS_A']]
+dataNH_subset = dataNHIS[['']]
 
 # Rename weight column in dataNHIS to match name in dataPLCO
-dataNH_subset = dataNH_subset.rename(columns={'WEIGHTLBTC_A': 'weight_f', 'HEIGHTTC_A':'height_f','DIBEV_A': 'diabetes_f','HYPEV_A':'hyperten_f','OVARYCAN_A': 'ovar_cancer'})
+dataNH_subset = dataNH_subset.rename(columns={''})
 print(dataNH_subset.describe())
 
 # Combine dataPLCO and dataNHIS
